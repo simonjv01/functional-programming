@@ -24,6 +24,7 @@ public class ImperativeVsDeclarativeExample2 {
         /**
          * Declarative
          */
+        List<Integer> uniqueList2 = new ArrayList<>();
 
 
     }
