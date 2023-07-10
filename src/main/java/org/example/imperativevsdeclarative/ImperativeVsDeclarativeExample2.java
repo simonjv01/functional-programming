@@ -3,6 +3,7 @@ package org.example.imperativevsdeclarative;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class ImperativeVsDeclarativeExample2 {
     public static void main(String[] args) {
@@ -17,14 +18,19 @@ public class ImperativeVsDeclarativeExample2 {
             if (!uniqueList.contains(integer)) {
                 uniqueList.add(integer);
             }
-            System.out.println("uniqueList : " + uniqueList);
+
         }
+        System.out.println("uniqueList : " + uniqueList);
 
 
         /**
          * Declarative
          */
-        List<Integer> uniqueList2 = new ArrayList<>();
+        List<Integer> uniqueList1 = integerList.stream()
+                .distinct()
+                .collect(Collectors.toList());
+
+        System.out.println("uniqueList1 : " + uniqueList1);
 
 
     }
