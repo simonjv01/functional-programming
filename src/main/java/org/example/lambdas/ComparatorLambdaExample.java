@@ -28,6 +28,8 @@ public class ComparatorLambdaExample {
         System.out.println("Result of comparator lambda is :" + comparatorLambda.compare(1,10));
         };
 
+        Comparator<Integer> comparatorLambda1 = Integer::compareTo;
+
 
     }
 
